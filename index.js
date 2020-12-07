@@ -12,4 +12,4 @@ showLog(colors.bgRed('red background'));
 
 showLog(colors.brightYellow.bold('bright yellow bold text')); 
 
-showLog(colors.random('rendom colored text')); 
+showLog(colors.random('random colored text')); 

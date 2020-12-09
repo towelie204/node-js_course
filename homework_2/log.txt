@@ -1,0 +1,14 @@
+win
+win
+losse
+win
+win
+losse
+user has finished the game
+losse
+losse
+losse
+losse
+win
+win
+user has finished the game

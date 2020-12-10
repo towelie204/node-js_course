@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>translator</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel='stylesheet' href='/style.css' />
+</head>
+
+<body>
+  <h1>Переводчик</h1>
+  <div class="content">
+    <form action="/" method="POST">
+      <label for="text">Введите текст на английском языке:</label>
+      <textarea name="text" id="text" cols="30" rows="2"></textarea>
+      <button type="submit">Перевести</button>
+    </form>
+    <h2>
+      {{translated}}
+    </h2>
+  </div>
+</body>
+
+</html>

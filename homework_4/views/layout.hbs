@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>translator</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel='stylesheet' href='/style.css' />
+</head>
+
+<body>
+  <h1>Хабр новости</h1>
+  <div class="content">
+    <form action="/" method="POST">
+      <label for="source">Источник:</label>
+      <select name="source" id="source">
+        <option value="news">Новости</option>
+        <option value="articles">Статьи</option>
+        <option value="habs">Хабы</option>
+      </select>
+      <button type="submit">Смотреть</button>
+    </form>
+    <ul>
+      {{#if news}}
+        {{#each news}}
+          <li>{{this}}</li>
+        {{/each}}
+      {{/if}}
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<div>
+
+    <div class="mt-5 mb-5">
+        <a href="/newNote" class="btn btn-success">Добавить статью</a>
+    </div>
+
+    {{#each notes}}
+    <div>
+        <h3>{{ this.title }}</h3>
+
+        <p>{{{ this.text }}}</p>
+
+        <div class="note_controls">
+            <a href="/edit/{{ this.id }}" class="btn btn-info">Редактировать</a>
+            <form action="/{{this.id}}?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger">Удалить</button>
+            </form>
+        </div>
+
+    </div>
+    {{/each}}
+
+</div>

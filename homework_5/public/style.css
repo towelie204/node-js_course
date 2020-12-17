@@ -1,0 +1,11 @@
+body {
+    padding: 50px 100px;
+}
+
+.note_controls {
+    display: flex;
+}
+
+.btn {
+    margin: 0 10px;
+}

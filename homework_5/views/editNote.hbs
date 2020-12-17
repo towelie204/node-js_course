@@ -1,0 +1,26 @@
+<div>
+
+    <a href="/" class="btn btn-secondary mb-3 mt-4">назад</a>
+    <h3 class="mb-3">Редактировать</h3>
+
+    <form action="/edit/{{ note.id }}?_method=PUT" method="POST">
+
+        <fieldset>
+            <div class="col">
+                <label for="title">Заголовок:</label>
+                <input type="text" name="title" value="{{ note.title }}" id="title" required class="form-control">
+            </div>
+
+            <div>
+                <label for="text">Текст <i>(md)</i></label>
+                <textarea name="text" id="text" cols="30" rows="8" class="form-control">{{ note.text }}</textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        </div>
+
+    </form>
+
+</div>

@@ -8,10 +8,10 @@ function saveNoteAndRedirect(path) {
             note.text = req.body.text
         try {
             note = await note.save();
-            //console.log(note);
+            // console.log(note);
             res.redirect(`/`);
         } catch (e) {
-            //console.log(note);
+            // console.log(note);
             res.render(`${path}`, { note: note });
         }
     }

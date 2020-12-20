@@ -36,9 +36,6 @@ router.put('/edit/:id', async (req, res, next) => {
     next()
 }, saveNoteAndRedirect('/'));
 
-// хотел сделать красивые переходы по ссылке, чтобы название писалось английскими буквами, а пробелы 
-// заменялись слешем _ , но уже нет сил что-то. 
-
 // router.get('/:link', async (req, res) => {
 //     let note = await Note.findOne({ link: req.params.link });
 //     if (note === null) res.redirect('/');

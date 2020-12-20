@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cheerio = require('cheerio');
+const templating = require('consolidate');
+const handlebars = require('handlebars');
 
 const API = require('./habrApi');
 
@@ -13,10 +15,12 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+templating.requires.handlebars = handlebars;
 
-// загружает новости и выдаёт ошибку! при обновлении страницы всё падает. не могу понять
+app.engine('hbs', templating.handlebars);
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
 app.get('/', async (req, res) => {
     let newsArr = [];
     

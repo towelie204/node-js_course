@@ -1,0 +1,31 @@
+<div class="login__wrapper">
+    <h4 class="title login__title">Регистрация</h4>
+    {{!-- <div>{{{messages}}}</div> --}}
+    <form action="/register" method="POST" class="login__form">
+        <label for="email" class="login__label">Адресс электронной почты</label>
+        <input required type="email" name="email" id="email" class="login__input" tabindex="1">
+
+        <label for="pass" class="login__label">Пароль</label>
+        <input required type="password" name="pass" id="pass" class="login__input" tabindex="2">
+        <label for="pass" class="login__label">Повторите пароль</label>
+        <input required type="password" name="pass2" id="pass2" class="login__input" tabindex="3">
+        <input type="submit" class="login__submit">
+    </form>
+
+    <div class="login__form register_wrap">
+        <p class="register_text">Уже зарегестрированы?</p>
+        <a href="/login" class="register_link">Войти</a>
+    </div>
+
+    <!--
+			<form action="#" method="POST" class="login__form">
+                <label for="name" class="login__label">Имя</label>
+                <input required type="text" name="name" id="name" class="login__input" tabindex="1">
+                <label for="email" class="login__label">Адресс электронной почты</label>
+                <input required type="email" name="email" id="email" class="login__input" tabindex="2">
+				<label for="phone" class="login__label">Телефон</label>
+                <input required type="tel" name="phone" id="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="login__input" tabindex="3">
+                <input type="submit" class="login__submit">
+            </form>
+			-->
+</div>

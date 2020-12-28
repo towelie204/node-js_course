@@ -1,0 +1,25 @@
+<div>
+
+    <a href="/notes" class="btn btn-secondary mb-3 mt-4">назад</a>
+    <h3 class="mb-3">Новая заметка</h3>
+
+    <form action="/notes/newNote" method="POST">
+
+        <fieldset>
+            <div class="row">
+                <label for="title">Название</label>
+                <input type="text" name="title" value="{{ note.title }}" id="title" required class="form-control">
+            </div>
+            <div>
+                <label for="text">Текст</label>
+                <textarea name="text" id="text" cols="30" rows="5" class="form-control">{{ note.text }}</textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Загрузить статью</button>
+        </div>
+
+    </form>
+
+</div>

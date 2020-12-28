@@ -1,0 +1,36 @@
+<div class="chat__wrapper">
+  <a href="/" class="btn btn-primary">На главную</a>
+  <div class="chat">
+    <div id="messages"></div>
+    <form action="">
+      <input id="msg" autocomplete="off" />
+      <button onClick="submitMessage(event)">Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    function submitMessage(e) {
+      const messageEl = document.getElementById('msg');
+
+      e.preventDefault();
+      console.log('chatMessage', messageEl.value);
+      socket.emit('chatMessage', { message: messageEl.value });
+      messageEl.value = '';
+      messageEl.focus();
+      return false;
+    }
+
+    socket.on('chatMessage', function (msg) {
+      const messagesEl = document.getElementById('messages');
+
+      const messageEl = document.createElement('div');
+      messageEl.textContent = msg.message;
+
+      messagesEl.appendChild(messageEl);
+    });
+
+  </script>
+</div>

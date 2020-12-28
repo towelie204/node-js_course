@@ -1,0 +1,18 @@
+<div class="login__wrapper">
+    <h4 class="title login__title">Войти на сайт</h4>
+    <form method="POST" action="/login" class="login__form" id="loginForm">
+        <label for="email" class="login__label">email:</label>
+        <input required type="text" name="email" id="email" class="login__input" tabindex="1">
+        <label for="pass" class="login__label">
+            Пароль
+        </label>
+        <input required type="password" name="pass" id="pass" class="login__input" tabindex="2">
+        <input type="submit" class="login__submit" value="Войти">
+    </form>
+
+
+    <div class="login__form register_wrap">
+        <p class="register_text">Впервые здесь?</p>
+        <a href="/register" class="register_link">зарегистрироваться</a>
+    </div>
+</div>

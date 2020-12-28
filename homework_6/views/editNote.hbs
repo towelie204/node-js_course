@@ -1,9 +1,9 @@
 <div>
 
-    <a href="/" class="btn btn-secondary mb-3 mt-4">назад</a>
+    <a href="/notes" class="btn btn-secondary mb-3 mt-4">назад</a>
     <h3 class="mb-3">Редактировать</h3>
 
-    <form action="/edit/{{ note.id }}?_method=PUT" method="POST">
+    <form action="/notes/edit/{{ note.id }}?_method=PUT" method="POST">
 
         <fieldset>
             <div class="col">

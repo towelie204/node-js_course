@@ -9,7 +9,7 @@ function saveNoteAndRedirect(path) {
         try {
             note = await note.save();
             // console.log(note);
-            res.redirect(`/`);
+            res.redirect(`/notes`);
         } catch (e) {
             // console.log(note);
             res.render(`${path}`, { note: note });

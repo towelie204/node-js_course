@@ -1,0 +1,28 @@
+<div>
+
+    <a href="/logout" class="btn btn-danger exitBtn">Выйти</a>
+    <a href="/chat" class="btn btn-dark btn_chat">Перейти в чат</a>
+
+    <div class="mt-5 mb-5">
+        <a href="/notes/newNote" class="btn btn-success">Добавить статью</a>
+    </div>
+
+    {{#each notes}}
+    <div>
+        <a href="/notes/{{ this.link }}" class="article__title-link">
+            <h3>{{ this.title }}</h3>
+        </a>
+
+        <p>{{{ this.text }}}</p>
+
+        <div class="note_controls">
+            <a href="/notes/edit/{{ this.id }}" class="btn btn-info">Редактировать</a>
+            <form action="/notes/{{this.id}}?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger">Удалить</button>
+            </form>
+        </div>
+
+    </div>
+    {{/each}}
+
+</div>
